@@ -5,7 +5,7 @@ const Updatedata = async () => {
     let db = await dbconnect();
 
     //insert Single Record.
-    const result = await db.update(
+    const result = await db.updateOne(
         { Fname: "Aruna" }, { $set: { Address: "Borivali" } }
     );
     if (result.acknowledged == true) {
