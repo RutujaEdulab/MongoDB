@@ -7,6 +7,7 @@ const Updatedata = async () => {
     //insert Single Record.
     const result = await db.updateOne(
         { Fname: "Aruna" }, { $set: { Address: "Borivali" } }
+        // { Fname: "Aruna" }, { $set: { Address: "Borivali",Lname:"Patel" } } //update multiple fields from one record.
     );
     if (result.acknowledged == true) {
         console.log("Update Successfully");
